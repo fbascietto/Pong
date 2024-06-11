@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfoxkq3rtff7b"]
+
+[ext_resource type="Script" path="res://Scripts/audio-manager.gd" id="1_5bdl4"]
+
+[node name="Audio" type="Node"]
+script = ExtResource("1_5bdl4")
+
+[node name="Sounds" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Sounds"]
+volume_db = -10.0
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="Sounds"]
+volume_db = -10.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Sounds"]
+volume_db = -10.0
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Sounds"]
+volume_db = -10.0
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Sounds"]
+volume_db = -10.0

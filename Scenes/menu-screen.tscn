@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7fot81w5c2yd"]
+
+[ext_resource type="Script" path="res://Scripts/menu-screen.gd" id="1_fqg46"]
+[ext_resource type="Texture2D" uid="uid://c1jtw22cli5qe" path="res://Art/logo.png" id="1_too66"]
+
+[node name="Menu-screen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fqg46")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(576, 180)
+texture = ExtResource("1_too66")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 60.0
+offset_right = 718.0
+offset_bottom = 129.0
+theme_override_font_sizes/font_size = 50
+text = "CUADRAZO"
+
+[node name="OnePlayerButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 353.0
+offset_right = 638.0
+offset_bottom = 389.0
+text = "One Player
+"
+
+[node name="TwoPlayersButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 415.0
+offset_right = 638.0
+offset_bottom = 451.0
+text = "Two Players
+"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 585.0
+offset_right = 709.0
+offset_bottom = 642.0
+text = "P1:  W: Up - S: Down
+P2:  Arrow up - Arrow Down"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="OnePlayerButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TwoPlayersButton" to="." method="_on_two_players_button_pressed"]
